@@ -65,7 +65,7 @@ router.put('/:id', (req, res) => {
   Category.update(req.body,{
     where:{
       id:req.params.id
-    },
+    }
   })
   .then(dbCategoryData => {
     if (!dbCategoryData[0]) {
@@ -85,15 +85,15 @@ router.delete('/:id', (req, res) => {
   Category.destroy({
     where:{
       id:req.params.id
-    },
+    }
   })
-  .then(dbCategoryData => {
-    if (!dbCategoryData[0]) {
+  .then(deleteSuccessful => {
+    if (!deleteSuccessful) {
         res.status(404).json({ message: 'No category found with this id'});
         return;
     }
-    res.json(dbCategoryData);
-    })
+    res.status(204).send();
+  })
   .catch(err => {
     console.log(err); 
     res.status(500).json(err);
