@@ -14,7 +14,7 @@
   - [Questions](#questions)
 
 ## Description
-This project is a back end app for an e-commerce site using Express.js API and Sequelize to interact with a MySQL database. This application displays creation of database using mySQL with models and associations. Then demonstrates the API Routes to perform RESTful CRUD operations displayed in the walk through videos.
+This app is a backend app for ecommerce site, using Express, API and mysql. This application uses models and associations and perform CRUD operations
 
 
 ## Installation
